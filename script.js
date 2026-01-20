@@ -32,5 +32,7 @@ async function GetSubCount(url) {
     if (metric.includes("decapi.me"))
         return "-";
     else
-        return `${metric}/${parseInt(metric) + 1}`;
+       const rounded = Math.ceil(parseInt(metric) / 10) * 10;
+return `${metric}/${rounded}`;
+
 }
